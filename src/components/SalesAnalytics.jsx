@@ -1,9 +1,11 @@
 import React from 'react';
-import { ProgressBarComponent } from '@syncfusion/ej2-react-progressbar';
+import { CircularProgressbar } from 'react-circular-progressbar';
 import { FaHandsHolding } from "react-icons/fa6";
 import { IoDiscOutline } from "react-icons/io5";
 import { MdOutlineAnalytics } from "react-icons/md";
 import { PiNotificationLight } from "react-icons/pi";
+import 'react-circular-progressbar/dist/styles.css';
+
 export default function SalesAnalytics() {
     const progressValue = 50; // Example progress value
 
@@ -15,7 +17,7 @@ export default function SalesAnalytics() {
             <div className="flex items-center mb-4">
 
                 <div className="relative">
-                    <ProgressBarComponent
+                    <CircularProgressbar
                         id="circular-container"
                         type="Circular"
                         height="180px"
@@ -28,7 +30,7 @@ export default function SalesAnalytics() {
                     />
 
                     <div
-                        className="absolute inset-0 flex items-center justify-center text-lg font-semibold"
+                        className="absolute inset-0 flex items-center justify-center text-3xl font-semibold"
                         style={{ color: '#4a4a4a' }}
                     >
                         {progressValue}%
@@ -92,4 +94,6 @@ export default function SalesAnalytics() {
         </div>
     );
 }
+
+
 

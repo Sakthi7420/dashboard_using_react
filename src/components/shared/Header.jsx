@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react'
-import { Menu, Popover, Transition } from '@headlessui/react'
-import { HiOutlineBell, HiOutlineSearch, HiOutlineChatAlt } from 'react-icons/hi'
-import { useNavigate } from 'react-router-dom'
-import classNames from 'classnames'
+import React, { Fragment } from 'react';
+import { Menu, Popover, Transition } from '@headlessui/react';
+import { HiOutlineBell, HiOutlineSearch } from 'react-icons/hi';
+import { useNavigate } from 'react-router-dom';
+import classNames from 'classnames';
 
 export default function Header() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     return (
         <div className="bg-blue-600 h-16 px-4 flex items-center border-b border-gray-200 justify-between">
@@ -27,7 +27,7 @@ export default function Header() {
                                     'group inline-flex items-center rounded-sm p-1.5 text-gray-700 hover:text-opacity-100 focus:outline-none active:bg-gray-100'
                                 )}
                             >
-                                <HiOutlineChatAlt fontSize={24} />
+                                {/* Add a button icon or text here if needed */}
                             </Popover.Button>
                             <Transition
                                 as={Fragment}
@@ -82,8 +82,8 @@ export default function Header() {
                     <Menu.Button className="ml-2 bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-neutral-400">
                         <span className="sr-only">Open user menu</span>
                         <div
-                            className="h-10 w-10 rounded-full bg-sky-500 bg-cover bg-no-repeat bg-center"
-                            style={{ backgroundImage: 'url("https://source.unsplash.com/80x80?face")' }}
+                            className="h-10 w-10 rounded-full bg-cover bg-no-repeat bg-center"
+                            // style={{ backgroundImage: 'url("https://shorturl.at/pZlLy")', backgroundSize: 'cover', backgroundPosition: 'center' }}
                         >
                             <span className="sr-only">Marc Backes</span>
                         </div>
@@ -128,5 +128,5 @@ export default function Header() {
                 </Menu>
             </div>
         </div>
-    )
+    );
 }
